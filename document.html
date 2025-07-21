@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="rocket">
+            <img src="download.rocket.png">
+        </div>
+    </div>
+    <!--javascript goes here-->
+    <script>
+        function stars(){
+            let count = 52;
+            let box = document.querySelector(".box");
+            let i = 0;
+            while(i < count) {
+                let star = document.createElement('i');
+                let x = Math.floor(Math.random() * window.innerWidth);
+                let h = Math.random() * 100;
+                let duration= Math.random() * 1;
+                star.style.left = x + "px";
+                star.style.width = 1 + "px";
+                star.style.height = h + "px";
+                star.style.animationDuration = duration + 's';
+                box.appendChild(star);
+                i++
+            }
+        }
+        stars()
+    </script>
+</body>
+</html>
